@@ -71,7 +71,7 @@ export default function Home() {
           "url('https://images.pexels.com/photos/5638701/pexels-photo-5638701.jpeg')",
       }}
     >
-      <div className="absolute left-0 top-0 w-1/4 h-full bg-grey-900 bg-opacity-75 p-6 flex items-center justify-center">
+      <div className="absolute left-0 top-0 w-1/4 h-full bg-grey-900 bg-opacity-75 p-6 flex items-top-left justify-center">
         <p className="text-lg italic text-yellow-300">
           Stuck in thoughts about what caption to give your photos? <br />
           <span className="font-bold">
