@@ -2,9 +2,9 @@
 
 // Section for Imports
 import OpenAI from "openai";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
-import { Sidebar, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 // Section for Configuration
 const openai = new OpenAI({
@@ -64,25 +64,23 @@ export default function Home() {
 
   // Section for JSX Return
   return (
-    <main className="flex items-center justify-center flex-col w-full h-screen gap-5 bg-gray-900 text-gray-50">
-      {/*Sidebar with the new text*/}
-      <div className="absolute left-0 top-0 w-1/4 h-full bg-grey-900 bg-opacity-75 p-6 flex items-top-left justify-center">
+    <main
+      className="flex items-center justify-center flex-col w-full h-screen gap-5 bg-gray-900 text-gray-50 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('https://images.pexels.com/photos/5638701/pexels-photo-5638701.jpeg')",
+      }}
+    >
+      <div className="absolute left-0 top-0 w-1/4 h-full bg-grey-900 bg-opacity-75 p-6 flex items-center justify-center">
         <p className="text-lg italic text-yellow-300">
-          Stuck in thoughts about what caption to give your photos? No worries,{" "}
-          <span className="font-bold">PhotoCap</span> has got you covered.
+          Stuck in thoughts about what caption to give your photos? <br />
+          <span className="font-bold">
+            No worries, PhotoCap has got you covered.
+          </span>
         </p>
       </div>
 
-      {/* Image on top of the title */}
-      <span className="flex items-center gape-3">
-        <img
-          src="https://images.pexels.com/photos/5638701/pexels-photo-5638701.jpeg"
-          alt="PhotoCap Logo"
-          className="flex items-center gap-1 h-80 mb-35"
-        />
-      </span>
-
-      <span className="flex items-center gap-3">
+      <span className="flex items-center gap-3 mt-4">
         <Sparkles strokeWidth={1.5} size={28} />
         <h1 className="text-3xl font-bold">PhotoCap</h1>
       </span>
@@ -140,15 +138,15 @@ export default function Home() {
         </button>
       </form>
 
-      {/*New button for copying caption*/}
+      <p className="mt-4">{caption}</p>
+
+      {/* New button for copying caption */}
       <button
         onClick={handleCopy}
-        className="bg-green-500 text-grey-50 py-2 px-6 rounded-md shadow transition-all duration-300 ease-out hover:shadow-l hover:bg-green-600 mt-4"
+        className="bg-green-500 text-gray-50 py-2 px-6 rounded-md shadow transition-all duration-300 ease-out hover:shadow-l hover:bg-green-600 mt-2"
       >
         {isCopied ? "Copied!" : "Copy Caption"}
       </button>
-
-      <p>{caption}</p>
     </main>
   );
 }
