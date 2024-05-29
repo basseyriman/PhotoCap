@@ -71,19 +71,14 @@ export default function Home() {
           "url('https://images.pexels.com/photos/5638701/pexels-photo-5638701.jpeg')",
       }}
     >
-      <div className="absolute left-0 top-0 w-1/4 h-full bg-grey-900 bg-opacity-75 p-6 flex items-top-left justify-center">
-        <p className="text-lg italic text-yellow-300">
-          Stuck in thoughts about what caption to give your photos? <br />
-          <span className="font-bold">
-            No worries, PhotoCap has got you covered.
-          </span>
-        </p>
-      </div>
-
       <span className="flex items-center gap-3 mt-4">
         <Sparkles strokeWidth={1.5} size={28} />
         <h1 className="text-3xl font-bold">PhotoCap</h1>
       </span>
+      <p className="text-center text-lg italic text-yellow-300">
+        Stuck in thoughts about what caption to give your photos? <br />
+        <b>No worries, PhotoCap has got you covered.</b>
+      </p>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
