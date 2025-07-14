@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PhotoCap - AI-Powered Photo Caption Generator
+
+A beautiful web application that generates creative and engaging captions for your photos using AI. Simply enter your location, outfit colors, and time of day to get the perfect caption.
+
+## Features
+
+- 🎨 **AI-Powered Captions**: Generate creative captions using OpenAI's GPT-4
+- 📱 **Responsive Design**: Works perfectly on desktop and mobile devices
+- 🎯 **Simple Interface**: Easy-to-use form with location, colors, and time inputs
+- 📋 **Copy to Clipboard**: One-click copying of generated captions
+- 🌟 **Demo Mode**: Works without API key using fallback captions
+- ⚡ **Fast & Lightweight**: Built with Next.js 14 and Tailwind CSS
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd photocap
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Set up your OpenAI API key (optional for demo mode):
+
+   - Create a `.env.local` file in the root directory
+   - Add your OpenAI API key:
+
+   ```
+   NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+   - Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys)
+
+4. Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Enter Location**: Where was the photo taken? (e.g., "London", "Newcastle")
+2. **Enter Colors**: What colors are in your outfit? (e.g., "Red", "Green", "Yellow")
+3. **Select Time**: Choose the time of day (Day, Dawn, Sunset, Midnight)
+4. **Generate Caption**: Click the button to get your AI-generated caption
+5. **Copy Caption**: Use the copy button to copy the caption to your clipboard
 
-## Learn More
+## Demo Mode
 
-To learn more about Next.js, take a look at the following resources:
+If you don't have an OpenAI API key, the app will work in demo mode with pre-generated captions based on your inputs. You'll see a yellow notification indicating demo mode.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Next.js 14**: React framework with App Router
+- **OpenAI API**: For AI-powered caption generation
+- **React Hook Form**: For form handling and validation
+- **Tailwind CSS**: For styling
+- **Lucide React**: For beautiful icons
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a `.env.local` file in the root directory:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```env
+NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key_here
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
